@@ -277,7 +277,7 @@ class _HomePage extends State<HomePage> {
                   child: Text("CATEGORY",style: TextStyle(fontSize:16,color: red),),
               ),
               SizedBox(height: 10,),
-              Categories(),
+             // Categories(),
              /* Container(
                 height: 150,
                 child:  GridView.builder(
@@ -340,7 +340,7 @@ class _HomePage extends State<HomePage> {
               ),*/
 
 
-            /*  Container(
+             Container(
                // padding: EdgeInsets.all(10.0),
                height: 150,
                 child: cList.length == 0 ? FutureBuilder<List<Category>>(
@@ -362,7 +362,7 @@ class _HomePage extends State<HomePage> {
                   },
                 ) : categoryList(),
 
-              ),*/
+              ),
              SecondBanner(),
               SizedBox(height: 10,),
               Padding(
@@ -566,7 +566,7 @@ class _HomePage extends State<HomePage> {
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(
-                      builder: (context) =>  SubCategory(),
+                      builder: (context) =>  SubCategory(id:cList[i].id),
                     ));
                   },
                   child: Card(
@@ -955,9 +955,9 @@ class _CategoriesState extends State<Categories> {
       itemBuilder: (BuildContext context, int index) {
         return GestureDetector(
           onTap: (){
-            Navigator.push(context, MaterialPageRoute(
+            /*Navigator.push(context, MaterialPageRoute(
               builder: (context) =>  SubCategory(),
-            ));
+            ));*/
           },
           child: Container(
               padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 5.0),
@@ -1034,9 +1034,9 @@ class _OffersState extends State<Offers> {
       itemBuilder: (BuildContext context, int index) {
         return GestureDetector(
           onTap: (){
-            Navigator.push(context, MaterialPageRoute(
+           /* Navigator.push(context, MaterialPageRoute(
               builder: (context) =>  SubCategory(),
-            ));
+            ));*/
           },
           child: Container(
             padding: EdgeInsets.only(left: 5.0, right: 5.0, top: 5.0),
